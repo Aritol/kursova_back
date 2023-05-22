@@ -17,7 +17,7 @@ const productScheme = new Schema({
     trim: true,
   },
   answer: {
-    type: Number,
+    type: mongoose.Types.Decimal128,
     required: true,
     minlength: 3,
     maxlength: 50,
@@ -39,11 +39,10 @@ const productScheme = new Schema({
     trim: true,
   },
   description: {
-    type: String,
+    type: Array,
     required: true,
     minlength: 1,
     maxlength: 3000,
-    trim: true,
   },
   photo: {
     data: Buffer,
